@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: antrikshdevpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: antrikshdevpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: antrikshdevpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: antrikshdevpipelinesjavascriptdocker 
+          image: mycontainerregistrydemoantriksh.azurecr.io/antrikshdevpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
